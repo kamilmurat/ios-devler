@@ -9,7 +9,6 @@ func closureParameter(myClosure: () -> Void) {
     print("closure parameter end ...")
 }
 
-// Closure'ı fonksiyon çağrısı sırasında geçirme
 closureParameter {
     print("Hi from closure!")
 }
