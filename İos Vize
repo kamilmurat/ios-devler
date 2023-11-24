@@ -1,0 +1,46 @@
+import UIKit
+// 1 soru
+func findMedian(_ array1: [Int], _ array2: [Int]) -> Double {
+    let merged = (array1 + array2).sorted()
+    let n = merged.count
+    if n % 2 == 0 {
+        return Double(merged[n / 2 - 1] + merged[n / 2]) / 2.0
+    } else {
+        return Double(merged[n / 2])
+    }
+}
+let array1 = [1, 3, 5]
+let array22 = [2, 4, 6, 8]
+let median = findMedian(arr1, arr2)
+print(median)
+
+
+
+//2 . soru 
+
+var numbers = [1, 1, 2]
+let uniqueNumbers = Array(Set(numbers)).sorted()
+for _ in 0..<(numbers.count - uniqueNumbers.count) {
+    numbers.append("_")
+}
+print(uniqueNumbers)
+
+
+
+//3 . soru
+
+
+func searchIndex(arr: [Int], target: Int) -> Int {
+    var index = arr.firstIndex(of: target) ?? 0
+    for (i, num) in arr.enumerated() {
+        if num > target {
+            index = i
+            break
+        }
+    }
+    return index
+}
+let numbers = [1, 3, 5, 6]
+print(searchIndex(arr: numbers, target: 5))
+print(searchIndex(arr: numbers, target: 2))
+print(searchIndex(arr: numbers, target: 7))
