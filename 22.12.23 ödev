@@ -1,0 +1,17 @@
+import UIKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    @IBAction func saveButton(_ sender: UIButton) {
+        let userName = userNameTextField.text
+        let resultText = resultLabel.text
+        resultLabel.text = userName
+        print(resultText ?? "")
+    }
+}
